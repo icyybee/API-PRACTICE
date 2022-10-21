@@ -1,0 +1,41 @@
+/**
+ * POST
+ * PUT
+ * GET
+ * DELETE of users
+ */
+
+// get all users
+ async function apiRequest() {
+    const request = await fetch('https://jsonplaceholder.typicode.com/users');
+
+    const response = await request.json();
+  
+    return response;
+}
+
+// apiRequest().then(request => {
+//     var result =request[0]
+//     var object = result.address
+//     console.log(request)
+// })
+
+async function getUserById(id){
+
+    const request = await fetch('https://jsonplaceholder.typicode.com/users?userId=$id');
+
+    apiRequest().then(data => {
+    // var result =request[0]
+    // var object = result.address
+    
+    console.log(data)
+})
+}
+// insert user
+async function insertUser(){
+
+}
+//update user
+async function updateUser(){
+    
+}
